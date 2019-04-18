@@ -10,18 +10,18 @@ const orderRouter = require('./api/routes/Orders');
 const userRouter = require('./api/routes/user');
 
 
-// const mdb = 'mongodb://127.0.0.1:27017/Stores'
-// mongoose.connect(mdb, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true
-// }, (error) => {
-//     if (!error) {
-//         console.log("Mongo Connected SuccessFully");
-//     } else {
-//         console.log("Error occured" + error);
-//     }
-// });
-// mongoose.Promise = global.Promise;
+const mdb = 'mongodb://127.0.0.1:27017/Stores'
+mongoose.connect(mdb, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+}, (error) => {
+    if (!error) {
+        console.log("Mongo Connected SuccessFully");
+    } else {
+        console.log("Error occured" + error);
+    }
+});
+mongoose.Promise = global.Promise;
 
 const app = express();
 
